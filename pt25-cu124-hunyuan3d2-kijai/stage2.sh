@@ -24,6 +24,9 @@ mv  "$workdir"/python_standalone  "$workdir"/Comfy3D_WinPortable/python_standalo
 # Download ComfyUI main app
 git clone https://github.com/comfyanonymous/ComfyUI.git \
     "$workdir"/Comfy3D_WinPortable/ComfyUI
+# Use latest stable version (has a release tag)
+cd "$workdir"/Comfy3D_WinPortable/ComfyUI
+git reset --hard "$(git tag | grep -e '^v' | sort -V | tail -1)"
 
 # Custom Nodes
 cd "$workdir"/Comfy3D_WinPortable/ComfyUI/custom_nodes
