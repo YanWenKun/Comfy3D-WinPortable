@@ -50,7 +50,12 @@ $gcs https://github.com/ltdrdata/ComfyUI-Impact-Pack.git
 $gcs https://github.com/ltdrdata/ComfyUI-Impact-Subpack.git
 $gcs https://github.com/ltdrdata/ComfyUI-Inspire-Pack.git
 $gcs https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git
-$gcs https://github.com/WASasquatch/was-node-suite-comfyui.git
+$gcs https://github.com/ltdrdata/was-node-suite-comfyui.git
+$gcs https://github.com/rgthree/rgthree-comfy.git
+$gcs https://github.com/chrisgoringe/cg-use-everywhere.git
+$gcs https://github.com/spacepxl/ComfyUI-Image-Filters.git
+$gcs https://github.com/shinich39/comfyui-get-meta.git
+$gcs https://github.com/aria1th/ComfyUI-LogicUtils.git
 
 # Download RealESRGAN_x4plus needed by example workflows
 curl -sSL https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth \

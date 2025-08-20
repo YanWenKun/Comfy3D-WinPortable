@@ -15,7 +15,7 @@ ls -lahF
 # Download Python Standalone
 cd "$workdir"
 curl -sSL \
-https://github.com/astral-sh/python-build-standalone/releases/download/20250205/cpython-3.12.9+20250205-x86_64-pc-windows-msvc-shared-install_only.tar.gz \
+https://github.com/astral-sh/python-build-standalone/releases/download/20250818/cpython-3.12.11+20250818-x86_64-pc-windows-msvc-install_only.tar.gz \
     -o python.tar.gz
 tar -zxf python.tar.gz
 mv python python_standalone
@@ -60,6 +60,11 @@ cd "$workdir"
 $pip_exe install -r "$workdir"/pak8.txt
 $pip_exe install -r "$workdir"/pak9.txt
 $pip_exe install -r "$workdir"/pakA.txt
+
+# Install comfyui-frontend-package, version determined by ComfyUI release version.
+latest_tag=$(curl -s https://api.github.com/repos/comfyanonymous/ComfyUI/tags | jq -r '.[0].name')
+$pip_exe install -r "https://github.com/comfyanonymous/ComfyUI/raw/refs/tags/${latest_tag}/requirements.txt"
+
 $pip_exe install -r "$workdir"/pakB.txt
 
 $pip_exe list
@@ -81,7 +86,7 @@ mv "$workdir"/aria2/*/aria2c.exe  "$workdir"/python_standalone/Scripts/
 rm aria2.zip
 
 # Add FFmpeg binary
-curl -sSL https://github.com/GyanD/codexffmpeg/releases/download/7.1/ffmpeg-7.1-full_build.zip \
+curl -sSL https://github.com/GyanD/codexffmpeg/releases/download/7.1.1/ffmpeg-7.1.1-full_build.zip \
     -o ffmpeg.zip
 unzip -q ffmpeg.zip -d "$workdir"/ffmpeg
 mv "$workdir"/ffmpeg/*/bin/ffmpeg.exe  "$workdir"/python_standalone/Scripts/

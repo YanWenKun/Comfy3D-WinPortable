@@ -5,7 +5,7 @@ einops
 fairscale
 ftfy
 gpytoolbox
-huggingface-hub[hf-transfer]
+huggingface-hub[hf-transfer,cli,hf-xet]
 imageio
 jaxtyping
 joblib
