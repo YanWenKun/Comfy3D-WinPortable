@@ -49,6 +49,8 @@ set CMAKE_ARGS=-DBUILD_opencv_world=ON -DWITH_CUDA=ON -DCUDA_FAST_MATH=ON -DWITH
 @REM ===========================================================================
 @REM 用于 Hunyuan3DWrapper
 
+.\python_standalone\python.exe -s -m pip install diso
+
 .\python_standalone\python.exe -s -m pip install --force-reinstall ^
  .\ComfyUI\custom_nodes\ComfyUI-Hunyuan3DWrapper\hy3dgen\texgen\custom_rasterizer
 

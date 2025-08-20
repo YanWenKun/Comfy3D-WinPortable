@@ -47,6 +47,8 @@ set PATH=%PATH%;%~dp0\python_standalone\Scripts
 @REM ===========================================================================
 @REM For Hunyuan3DWrapper
 
+.\python_standalone\python.exe -s -m pip install diso
+
 .\python_standalone\python.exe -s -m pip install --force-reinstall ^
  .\ComfyUI\custom_nodes\ComfyUI-Hunyuan3DWrapper\hy3dgen\texgen\custom_rasterizer
 
